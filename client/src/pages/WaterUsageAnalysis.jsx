@@ -28,7 +28,7 @@ const WaterUsageAnalysis = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/water-usage",
+        "https://deploy-qsxy.onrender.com/api/water-usage",
         {
           params: { period: selectedPeriod, crop: selectedCrop },
         }

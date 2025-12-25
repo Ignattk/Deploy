@@ -46,7 +46,7 @@ const FarmProfileSettings = () => {
     setSaved(false);
     try {
       const response = await axios.put(
-        "http://localhost:5000/api/farm-profile",
+        "https://deploy-qsxy.onrender.com/api/farm-profile",
         profileData
       );
       if (response.data.success) {

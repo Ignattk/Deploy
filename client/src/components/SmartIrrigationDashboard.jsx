@@ -66,7 +66,7 @@ const SmartIrrigationDashboard = () => {
         forecast_rain_mm: weather.precipitation || 0,
       };
       const response = await axios.post(
-        "http://localhost:5000/api/recommendation",
+        "https://deploy-qsxy.onrender.com/api/recommendation",
         requestData
       );
       setRecommendation(response.data);
