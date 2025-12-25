@@ -49,7 +49,9 @@ const WaterUsageAnalysis = () => {
 
   const loadAvailableCrops = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/crops");
+      const response = await axios.get(
+        "https://deploy-qsxy.onrender.com/api/water-usage"
+      );
       setAvailableCrops(["All Crops", ...response.data]);
     } catch (e) {}
   };

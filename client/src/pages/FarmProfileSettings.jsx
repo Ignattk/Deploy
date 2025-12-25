@@ -20,7 +20,7 @@ const FarmProfileSettings = () => {
   const loadProfileData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/farm-profile"
+        "https://deploy-qsxy.onrender.com/api/farm-profile"
       );
       setProfileData(response.data);
     } catch (error) {
@@ -31,7 +31,7 @@ const FarmProfileSettings = () => {
   const loadReferenceData = async () => {
     try {
       const soilTypesResponse = await axios.get(
-        "http://localhost:5000/api/soil-types"
+        "https://deploy-qsxy.onrender.com/api/soil-types"
       );
       setSoilTypes(soilTypesResponse.data);
     } catch (error) {

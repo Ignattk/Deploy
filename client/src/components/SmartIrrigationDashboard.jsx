@@ -42,9 +42,12 @@ const SmartIrrigationDashboard = () => {
   const loadWeatherData = useCallback(
     async (lat = formData.latitude, lon = formData.longitude) => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/weather`, {
-          params: { lat, lon },
-        });
+        const response = await axios.get(
+          `https://deploy-qsxy.onrender.com/api/weather`,
+          {
+            params: { lat, lon },
+          }
+        );
         setWeather(response.data);
       } catch (e) {
         console.error("Weather error", e);
